@@ -8,6 +8,10 @@
 <br />
 <br />
 
+## Screenshot
+
+![Screenshot](homepage_pic.png)
+
 ## Endpoints
 
 Request:
@@ -56,7 +60,3 @@ Response:
 }
 
 ```
-
-## Screenshot
-
-![Screenshot](homepage_pic.png)
