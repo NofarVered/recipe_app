@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS recipes;
+use recipes;
+
+CREATE TABLE IF NOT EXISTS DairyIngrediant(
+    name VARCHAR(12) PRIMARY KEY
+);
+
+CREATE TABLE IF NOT EXISTS GlutenIngrediant(
+    name VARCHAR(12) PRIMARY KEY
+);
+

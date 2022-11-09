@@ -1,0 +1,2 @@
+SELECT_DAIRY_INGREDIANTS = """SELECT name FROM DairyIngrediant"""
+SELECT_GLUTEN_INGREDIANTS = """SELECT name FROM GlutenIngrediant"""
