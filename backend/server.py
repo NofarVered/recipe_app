@@ -23,6 +23,7 @@ async def get_players(search: str = "", dairy: str = "", gluten: str = ""):
             f"https://recipes-goodness.herokuapp.com/recipes/{search}").json()["results"]
         filtered_recipes = recipe_processor_model.filter_recipes(
             recipes, dairy, gluten)
+        # print(filtered_recipes)
         return {"recipes": filtered_recipes}
     except requests.exceptions.HTTPError as err:
         raise HTTPException(
