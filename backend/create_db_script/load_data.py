@@ -16,9 +16,9 @@ def load():
     with CONNECTOR.cursor() as cursor:
         for ingredient in data_constants.dairy_ingredients:
             cursor.execute(insert_queries.INSERT_INGREDIANT,
-                           [ingredient, True, False])
+                           [ingredient, False, True])
             CONNECTOR.commit()
         for ingredient in data_constants.gluten_ingredients:
             cursor.execute(insert_queries.INSERT_INGREDIANT,
-                           [ingredient, False, True])
+                           [ingredient, True, False])
             CONNECTOR.commit()

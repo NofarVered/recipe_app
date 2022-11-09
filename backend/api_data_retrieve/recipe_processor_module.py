@@ -3,19 +3,19 @@ from .recipe import Recipe
 
 
 def _is_recipe_dairy_free(recipe: Recipe):
-    recipe_ingrediants = recipe.ingredients
     dairy_ingrediants = db_manager.get_dairy()
-    result = any(
-        map(lambda ingrediant: ingrediant in dairy_ingrediants, recipe_ingrediants))
-    return result != True
+    for ingrediant in recipe.ingredients:
+        if ingrediant in dairy_ingrediants:
+            return False
+    return True
 
 
 def _is_recipe_gluten_free(recipe: Recipe):
-    recipe_ingrediants = recipe.ingredients
     gluten_ingrdiants = db_manager.get_gluten()
-    result = any(
-        map(lambda ingrediant: ingrediant in gluten_ingrdiants, recipe_ingrediants))
-    return result != True
+    for ingrediant in recipe.ingredients:
+        if ingrediant in gluten_ingrdiants:
+            return False
+    return True
 
 
 def filter_recipes(recipes, dairyFree, glutenFree):

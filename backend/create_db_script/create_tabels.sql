@@ -3,6 +3,6 @@ use recipes;
 
 CREATE TABLE IF NOT EXISTS Ingrediant(
     name VARCHAR(12) PRIMARY KEY,
-    gluten_free BOOLEAN,
-    dairy_free BOOLEAN
+    has_gluten BOOLEAN,
+    has_dairy BOOLEAN
 );

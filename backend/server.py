@@ -5,10 +5,10 @@ import uvicorn
 from fastapi import HTTPException, status
 import requests
 from create_db_script.load_data import load
-from api_data_retrieve import recipe_processor_model
+from api_data_retrieve import recipe_processor_module
 app = FastAPI()
 
-load()
+# load()
 
 
 @app.get("/sanity")
@@ -21,9 +21,8 @@ async def get_players(search: str = "", dairy: str = "", gluten: str = ""):
     try:
         recipes = requests.get(
             f"https://recipes-goodness.herokuapp.com/recipes/{search}").json()["results"]
-        filtered_recipes = recipe_processor_model.filter_recipes(
+        filtered_recipes = recipe_processor_module.filter_recipes(
             recipes, dairy, gluten)
-        # print(filtered_recipes)
         return {"recipes": filtered_recipes}
     except requests.exceptions.HTTPError as err:
         raise HTTPException(
