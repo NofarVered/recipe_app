@@ -1,11 +1,8 @@
 CREATE DATABASE IF NOT EXISTS recipes;
 use recipes;
 
-CREATE TABLE IF NOT EXISTS DairyIngrediant(
-    name VARCHAR(12) PRIMARY KEY
+CREATE TABLE IF NOT EXISTS Ingrediant(
+    name VARCHAR(12) PRIMARY KEY,
+    free_gluten BOOLEAN,
+    free_dairy BOOLEAN
 );
-
-CREATE TABLE IF NOT EXISTS GlutenIngrediant(
-    name VARCHAR(12) PRIMARY KEY
-);
-

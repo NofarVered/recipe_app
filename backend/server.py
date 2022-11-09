@@ -8,7 +8,7 @@ from create_db_script.load_data import load
 from api_data_retrieve import recipe_processor_model
 app = FastAPI()
 
-# load()
+load()
 
 
 @app.get("/sanity")

@@ -14,8 +14,11 @@ def load():
     )
 
     with CONNECTOR.cursor() as cursor:
-        cursor.executemany(
-            insert_queries.INSERT_DAIRY_INGREDIANT, data_constants.dairy_ingredients)
-        cursor.executemany(
-            insert_queries.INSERT_GLUTEN_INGREDIANT, data_constants.gluten_ingredients)
-        CONNECTOR.commit()
+        for ingredient in data_constants.dairy_ingredients:
+            cursor.execute(insert_queries.INSERT_INGREDIANT,
+                           [ingredient, False, True])
+            CONNECTOR.commit()
+        for ingredient in data_constants.gluten_ingredients:
+            cursor.execute(insert_queries.INSERT_INGREDIANT,
+                           [ingredient, True, False])
+            CONNECTOR.commit()
