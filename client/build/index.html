@@ -43,16 +43,16 @@
         {{#each recipes}}
             <div class="col-sm-6" style="margin-bottom: 10px; width: 300px;">
                 <div class="card">
-                <img src="{{thumbnail}}" class="card-img-top" style="height: 400px;">
-                <div class="card-body">
-                    <h5 class="card-title">{{title}}</h5>
-                    <a href="#" class="card-link">card-link</a>
-                </div>
-                <ul class="list-group list-group-flush">
-                    {{#each ingredients}}
-                        <li class="list-group-item">{{this}}</li>
-                    {{/each}}
-                </ul>                
+                    <img src="{{thumbnail}}" class="card-img-top" style="height: 400px;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{title}}</h5>
+                        <a href="{{href}}" class="card-link">card-link</a>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        {{#each ingredients}}
+                            <li class="list-group-item">{{this}}</li>
+                        {{/each}}
+                    </ul>                
                 </div>
             </div>
         {{/each}}
