@@ -60,3 +60,18 @@ Response:
 }
 
 ```
+
+Request:
+
+```
+GET http://localhost:8000/search?search=eggs&dairy=true&gluten=false
+```
+
+Response:
+
+```
+{"recipes":
+        [{"title":"Bread and Butter Pudding","thumbnail":"https://www.themealdb.com/images/media/meals/xqwwpy1483908697.jpg","href":"https://www.youtube.com/watch?v=Vz5W1-BmOE4","ingredients":["butter","bread","sultanas","cinnamon","milk","double cream","eggs","sugar","nutmeg"]}]
+}
+
+```
