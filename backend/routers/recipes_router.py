@@ -7,7 +7,7 @@ router = APIRouter()
 
 
 @router.get("/search", status_code=200)
-async def get_players(search: str = "", dairy: str = "", gluten: str = ""):
+def get_players(search: str = "", dairy: str = "", gluten: str = ""):
     try:
         recipes = requests.get(
             f"https://recipes-goodness.herokuapp.com/recipes/{search}").json()["results"]
