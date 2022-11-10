@@ -1,6 +1,5 @@
 import pymysql
-from . import select_queries
-
+from .queries import select_queries
 HOST = "localhost"
 USER = "root"
 PASSWORD = ""

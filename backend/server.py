@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 import uvicorn
-from create_db_script.load_data import load
+from create_db_scripts.load_data import load
 from routers import recipes_router
 
 app = FastAPI()
